@@ -3,7 +3,7 @@ import navLink from "./navLink.js";
 export default {
     template: `
   <nav class="navbar">
-    <button class="editElement"></button>
+    <button v-if="editMode" class="editElement"></button>
     <div class="nav-container flex space-between items-center">
         <!-- <div class="logo">Blogin</div> -->
               <ul class="flex">
@@ -14,7 +14,7 @@ export default {
     </div>
   </nav>
                 `,
-    props: ['links'],
+    props: ['links', 'editMode'],
     data() {
         return {}
     },

@@ -19,16 +19,16 @@ export default {
               
                 </div>
                 <div class="editorOperator flex space-between">
-                    <button class="editorOpBtn" @click="directionChange('left')"><</button>
-                    <button class="editorOpBtn" @click="toggleMenu()">collapse</button>
-                    <button class="editorOpBtn" @click="directionChange('right')">></button>
+                    <button class="editorOpBtn arrowLeft" @click="directionChange('left')"></button>
+                    <button class="editorOpBtn" @click="toggleMenu()">toggle</button>
+                    <button class="editorOpBtn arrowRight" @click="directionChange('right')"></button>
                 </div>
             </div>
                 `,
     data() {
         return {
             direction: "left",
-            menuOpen: true
+            menuOpen: false
         }
     },
     created() {},

@@ -1,5 +1,5 @@
 import { router } from './routes.js'
-import editor from './cmps/editor.js';
+import editPanel from './cmps/editPanel.js';
 import navbar from './cmps/navbar.js'
 
 new Vue({
@@ -7,13 +7,13 @@ new Vue({
     router,
     template: `
         <section class="my-app">
-            <navbar :links="links"></navbar>
-            <editor @toggle-edit="toggleEditMode"></editor>
+            <navbar :links="links" :editMode="editMode"></navbar>
+            <editPanel @toggle-edit="toggleEditMode"></editPanel>
         </section>
     `,
     data() {
         return {
-            editMode: true,
+            editMode: false,
             navLinks: [{ title: 'home', path: '/' }, { title: 'about', path: '/about' }]
         }
     },
@@ -27,5 +27,5 @@ new Vue({
             this.editMode = !this.editMode;
         }
     },
-    components: { editor, navbar }
+    components: { editPanel, navbar }
 })

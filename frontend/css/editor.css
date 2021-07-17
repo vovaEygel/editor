@@ -35,6 +35,11 @@
     padding: 10px;
 }
 
+.editorOpBtn {
+    border: 0;
+    border-radius: 10px;
+}
+
 .editElement {
     width: 45px;
     height: 45px;
@@ -42,9 +47,6 @@
     top: 0;
     right: 0;
     background: url('../assets/pen.svg');
-    background-color: aliceblue;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .slideRight {
@@ -59,4 +61,20 @@
 
 .buttonsContainer.collapsed {
     max-height: 0;
+}
+
+.arrowLeft {
+    width: 30px;
+    background: url('../assets/arrowLeft.svg');
+    background-color: inherit;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.arrowRight {
+    width: 30px;
+    background: url('../assets/arrowRight.svg');
+    background-color: inherit;
+    background-repeat: no-repeat;
+    background-position: center;
 }
