@@ -1,0 +1,121 @@
+.navbar {
+    width: 100%;
+    /* background-color: #292929; */
+    background-color: var(--color10);
+    color: #fff;
+}
+
+.nav-container {
+    height: 70px;
+}
+
+.nav-container ul {
+    height: 100%;
+    padding-left: 0;
+}
+
+.nav-container li {
+    list-style-type: none;
+    width: 8.125rem;
+    height: 100%;
+}
+
+.nav-container a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    border-right: #1e1e1e solid 1px;
+    color: #fff;
+    line-height: 70px;
+    letter-spacing: 0.8px;
+}
+
+.nav-container>:nth-child(2) {
+    border-left: #1e1e1e solid 1px;
+}
+
+.nav-container a:hover,
+li:hover {
+    border-bottom: 4px solid var(--color3);
+    color: var(--color3);
+}
+
+.side-menu-btn {
+    display: none;
+}
+
+@media (max-width: 910px) {
+    .continer {
+        max-width: 660px;
+    }
+    .menu-btn {
+        display: block;
+        width: 8.125rem;
+        height: 100%;
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        height: 130px;
+        text-align: center;
+        line-height: 130px;
+        border-left: #1e1e1e solid 1px;
+        border-right: #1e1e1e solid 1px;
+        background-color: #292929;
+        font-size: 2.5rem;
+    }
+    .nav-continer>ul {
+        height: 100vh;
+        min-width: 200px;
+        position: fixed;
+        background-color: #292929;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin-top: 0;
+        flex-direction: column;
+        padding: 0;
+        box-shadow: -5px 0px 44px 7px rgba(0, 0, 0, 0.73);
+        transform: translate(120%, 0);
+        transition: transform .8s;
+    }
+    .nav-continer a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+        width: 100%;
+        height: 70px;
+        line-height: 70px;
+        border-top: #1e1e1e solid 1px;
+        border-bottom: #1e1e1e solid 1px;
+    }
+    .nav-continer a:hover {
+        color: #58c93a;
+        border-left: 5px solid #58c93a;
+        border-bottom: 0px;
+    }
+    .nav-continer li {
+        height: 70px;
+        width: 100%;
+    }
+    .menu-open .nav-continer>ul {
+        transform: translate(0, 0);
+    }
+    .screen {
+        visibility: hidden;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.8);
+        opacity: 0;
+    }
+    .menu-open .screen {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity .3s;
+    }
+    .menu-btn:hover {
+        color: #58c93a;
+        border-bottom: 2px solid #58c93a;
+    }
+}

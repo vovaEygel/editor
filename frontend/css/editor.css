@@ -1,0 +1,62 @@
+.container,
+.editorContainer {
+    border-radius: 5px;
+    box-shadow: var(--color5) 3px 3px 15px;
+    background-color: var(--color4);
+}
+
+.editorBtn {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: 0;
+    border-radius: 10px;
+}
+
+.editorContainer {
+    max-width: 240px;
+    padding: 5px;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+}
+
+.buttonsContainer {
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    transition: max-height 1s ease-in-out;
+    overflow: hidden;
+    max-height: 1000px;
+}
+
+.editorOperator {
+    padding: 10px;
+}
+
+.editElement {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url('../assets/pen.svg');
+    background-color: aliceblue;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slideRight {
+    transform: translateX(calc(100vw - 240px));
+    transition: all 2.5s;
+}
+
+.slideLeft {
+    transform: translateX(0);
+    transition: all 2.5s;
+}
+
+.buttonsContainer.collapsed {
+    max-height: 0;
+}
