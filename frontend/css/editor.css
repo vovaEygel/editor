@@ -1,24 +1,25 @@
 .container,
 .editorContainer {
     border-radius: 5px;
-    box-shadow: var(--color5) 3px 3px 15px;
-    background-color: var(--color4);
+    /* box-shadow: var(--color5) 3px 3px 15px; */
+    /* background-color: var(--color4); */
 }
 
 .editorBtn {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     margin: 10px;
     border: 0;
-    border-radius: 10px;
+    border-radius: 50px;
+    background-color: white;
+    box-shadow: var(--color5) 0px 0px 15px;
 }
 
 .editorContainer {
     max-width: 240px;
     padding: 5px;
     position: absolute;
-    z-index: 999;
     top: 0;
 }
 
@@ -41,12 +42,14 @@
 }
 
 .editElement {
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     position: absolute;
     top: 0;
     right: 0;
-    background: url('../assets/pen.svg');
+    border-radius: 50px;
+    border: 0;
+    background: url('../assets/pen.svg') no-repeat center #ffffff;
 }
 
 .slideRight {
@@ -63,8 +66,14 @@
     max-height: 0;
 }
 
-.arrowLeft {
+.arrowLeft,
+.arrowRight,
+.toggler {
     width: 30px;
+    height: 30px;
+}
+
+.arrowLeft {
     background: url('../assets/arrowLeft.svg');
     background-color: inherit;
     background-repeat: no-repeat;
@@ -72,9 +81,52 @@
 }
 
 .arrowRight {
-    width: 30px;
     background: url('../assets/arrowRight.svg');
     background-color: inherit;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.toggler {
+    background: url('../assets/power.svg') no-repeat center transparent;
+}
+
+.buttonsContainer>button:nth-child(1) {
+    background: url('../assets/editPen.svg') no-repeat center #ffffff;
+}
+
+.buttonsContainer>button:nth-child(2) {
+    background: url('../assets/deliver.svg') no-repeat center #ffffff;
+}
+
+.buttonsContainer>button:nth-child(3) {
+    background: url('../assets/deliver.svg') no-repeat center #ffffff;
+}
+
+.buttonsContainer>button:nth-child(4) {
+    background: url('../assets/megaphone.svg') no-repeat center #ffffff;
+}
+
+.buttonsContainer>button:nth-child(5) {
+    background: url('../assets/options.svg') no-repeat center #ffffff;
+}
+
+.buttonsContainer>button:nth-child(6) {
+    background: url('../assets/cog.svg') no-repeat center #ffffff;
+}
+
+.buttonsContainer>button:nth-child(7) {
+    background: url('../assets/folder.svg') no-repeat center #ffffff;
+}
+
+.buttonsContainer>button:nth-child(8) {
+    background: url('../assets/box.svg') no-repeat center #ffffff;
+}
+
+.buttonsContainer>button:nth-child(9) {
+    background: url('../assets/msg.svg') no-repeat center #ffffff;
+}
+
+.buttonsContainer>button:nth-child(10) {
+    background: url('../assets/cloud.svg') no-repeat center #ffffff;
 }

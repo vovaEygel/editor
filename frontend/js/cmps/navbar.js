@@ -5,7 +5,7 @@ export default {
   <nav class="navbar">
     <button v-if="editMode" class="editElement"></button>
     <div class="nav-container flex space-between items-center">
-        <!-- <div class="logo">Blogin</div> -->
+        <!-- <div class="logo">logo</div> -->
               <ul class="flex">
                 <navLink v-for="link in links" :link="link"></navLink>
             </ul>

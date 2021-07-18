@@ -4,7 +4,7 @@ export default {
     template: `
             <div class="editorContainer" :class="panelDirection">
                 <div class="buttonsContainer" :class="menuStatus">
-                    <button class="editorBtn" @click="toggleEditMode()">edit</button>
+                    <button class="editorBtn" @click="toggleEditMode()"></button>
                     <button class="editorBtn"></button>
                     <button class="editorBtn"></button>
                     <button class="editorBtn"></button>
@@ -14,13 +14,10 @@ export default {
                     <button class="editorBtn"></button>
                     <button class="editorBtn"></button>
                     <button class="editorBtn"></button>
-                    <button class="editorBtn"></button>
-                    <button class="editorBtn"></button>
-              
                 </div>
                 <div class="editorOperator flex space-between">
                     <button class="editorOpBtn arrowLeft" @click="directionChange('left')"></button>
-                    <button class="editorOpBtn" @click="toggleMenu()">toggle</button>
+                    <button class="editorOpBtn toggler" @click="toggleMenu()"></button>
                     <button class="editorOpBtn arrowRight" @click="directionChange('right')"></button>
                 </div>
             </div>
@@ -28,7 +25,7 @@ export default {
     data() {
         return {
             direction: "left",
-            menuOpen: false
+            menuOpen: true
         }
     },
     created() {},
