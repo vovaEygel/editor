@@ -1,8 +1,10 @@
 export default {
     template: `
-  <li>
-    <a :href="linkUrl">{{linkTitle}}</a>
-</li>
+  <router-link :to="linkUrl" exact>
+      <li>
+          {{linkTitle}}
+      </li>
+</router-link>
                 `,
     props: ['link'],
     data() {

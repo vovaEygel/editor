@@ -10,10 +10,13 @@ const http = require('http').createServer(app);
 
 //route imports
 const authRoutes = require('./api/auth/auth.routes')
-const influencerRoutes = require('./api/influencer/influencer.routes')
+const navbarRoutes = require('./api/navbar/navbar.routes')
 
 app.use(cookieParser())
-app.use(bodyParser.json());
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 //use session middlewere
 app.use(session({
     secret: 'braudeProject',
@@ -33,7 +36,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // routes
-app.use('/api/influencer', influencerRoutes)
+app.use('/api/navbar', navbarRoutes)
 app.use('/api/auth', authRoutes)
 
 const logger = require('./services/logger.service')

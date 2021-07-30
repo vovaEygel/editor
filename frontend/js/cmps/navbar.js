@@ -7,7 +7,7 @@ export default {
     <div class="nav-container flex space-between items-center">
         <!-- <div class="logo">logo</div> -->
               <ul class="flex">
-                <navLink v-for="link in links" :link="link"></navLink>
+                <navLink v-for="link in links" :link="link" :key="link.title"></navLink>
             </ul>
             <button class="side-menu-btn" onclick="toggleMenu()">☰</button>
         </div>

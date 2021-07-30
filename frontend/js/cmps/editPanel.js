@@ -24,7 +24,7 @@ export default {
                 `,
     data() {
         return {
-            direction: "left",
+            direction: "right",
             menuOpen: true
         }
     },

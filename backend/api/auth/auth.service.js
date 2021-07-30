@@ -1,7 +1,6 @@
 // const bcrypt = require('bcrypt')
-const influencerService = require('../influencer/influencer.service.js')
-const brandService = require('../brand/brand.service.js')
-const userService = require('../user/user.service.js');
+const navbarService = require('../navbar/navbar.service.js')
+    // const userService = require('../user/user.service.js');
 const logger = require('../../services/logger.service')
 
 

@@ -1,30 +1,22 @@
-const MongoClient = require('mongodb').MongoClient;
+const mysql = require('mysql');
 
-const config = require('../config')
+const dbConnection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'editor'
+})
 
-module.exports = {
-    getCollection
-}
-
-// Database Name
-const dbName = 'marketplace';
-
-var dbConn = null;
-
-async function getCollection(collectionName) {
-    const db = await connect()
-    return db.collection(collectionName);
-}
-
-async function connect() {
-    if (dbConn) return dbConn;
-    try {
-        const client = await MongoClient.connect(config.dbURL, { useUnifiedTopology: true });
-        const db = client.db(dbName);
-        dbConn = db;
-        return db;
-    } catch (err) {
-        console.log('Cannot Connect to DB', err)
+dbConnection.connect((err) => {
+    if (err) {
         throw err;
     }
-}
+    console.log('connected')
+})
+
+dbConnection.query('SELECT * FROM links where id=4', function(error, results, fields) {
+    if (error) throw error;
+    console.log('query res: ', JSON.parse(JSON.stringify(results))[0]);
+});
+
+dbConnection.end();
